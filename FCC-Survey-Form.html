@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FCC-Survey-Form-Project-2.css">
+    <title>Survey form FCC</title>
+</head>
+<body>
+    <div id="container">
+        <header class="main-header">
+            <h1 id="title"> Исследование вакцины Спутник V</h1>
+            <p id="description"> <em>Спасибо за возможность сделать исследование</em></p>
+        </header>
+    
+        <form id="survey-form" action="url-where-you-want-to-submit-form-data"> 
+            <div class="form-group">
+                <label for="name">Имя</label>
+                <input id="name" type="text" required placeholder="напишите ваше имя">
+            </div>   
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" required placeholder="напишите вашу почту">
+            </div>
+            <div class="form-group">
+                <label for="number" name="age">Возраст<span>(optional)</span></label>
+                <input id="age" type="number" required placeholder="напишите ваш возраст" min="10" max="55">
+            </div>
+            <div class="form-group">
+                <label for="dropdown">Какой ваш текущий статус?</label>
+                    <select name="status" id="dropdown-selector"> 
+                        <option value="">--Пожалуйста выберите опцию--</option>
+                        <option value="зараженный">Зараженный</option>
+                        <option value="вакцинированный">Вакцинированный</option>
+                        <option value="есть антитела">Есть антитела</option>
+                        <option value="переболевщий">Переболевщий</option>
+                    </select>
+            </div>
+                <div class="form-group">
+                    <label for="survey"> Посеветуете ли вы этот тест другу?</label>
+                    <input id="no" type='radio' name="survey" value="no"> нет <br> 
+                    <input id="yes" type="radio" name="survey" value="yes"> да <br>
+                    <label for="yes"><input id="not_sure" type="radio" name="survey" value="not sure"> не уверен</label>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Какая тема вам интересно обсуждать касательно вакцинаций?<label>
+                    <label for="side effects"><input type="checkbox" name="feedback" value="Побочные эффекты"> Побочные эффекты</label>
+                    <label for="interval"> <input type="checkbox" name="feedback" value="Промежуток"> Промежуток между вакцинами </label>
+                </div>
+                <div class="form-group">
+                <label for="text">Ваши предложения и отзывы</label>
+                    <textarea id="comments" name="comments" roes="10" cols="40" placeholder="Пишите ваши комментарий сдесь..."></textarea>
+                
+                </div>
+                <input type="submit" id="button-submit" value="Submit">
+        </form>
+        <p id="creator"> Created by <a href="https://www.linkedin.com/in/nurlybek-nurmakhanov-56b9abb9/" target="_blank" alt="this should open linkedin profile">NNBEK</a></p>
+    </div>
+</body>
+</html>
